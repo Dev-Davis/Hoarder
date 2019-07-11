@@ -1,0 +1,39 @@
+{
+  "stuff": {
+    "stuff1": {
+      "name": "Beats by Dre",
+      "type": "Headphones",
+      "condition": "Good",
+      "category": "Electronics",
+      "uid": "PQ2YsH3hXGgFwdMMUSSRHN69AUv1"
+    },
+    "stuff2": {
+      "name": "MacBook Pro 2012",
+      "type": "Laptop",
+      "condition": "Great",
+      "category": "Electronics",
+      "uid": "PQ2YsH3hXGgFwdMMUSSRHN69AUv1"
+    },
+    "stuff3": {
+      "name": "Hey Aronold Complete Series",
+      "type": "DVD",
+      "condition": "Great",
+      "category": "Entertainment",
+      "uid": "67890"
+    },
+    "stuff4": {
+      "name": "Maschine MK3",
+      "type": "Beat Machine",
+      "condition": "Good",
+      "category": "Music Production",
+      "uid": "12345"
+    },
+    "stuff5": {
+      "name": "PlayStation Vita",
+      "type": "Handheld Gaming System",
+      "condition": "Good",
+      "category": "Video Games",
+      "uid": "PQ2YsH3hXGgFwdMMUSSRHN69AUv1"
+    }
+  }
+}
