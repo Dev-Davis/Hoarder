@@ -1,20 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
   editEvent = (e) => {
     e.preventDefault();
-    const orderId = '78910';
-    this.props.history.push(`/edit/${orderId}`);
+    const orderId = '12345';
+    this.props.history.push(`/single/${orderId}`);
   };
 
   render() {
-    const singleLink = '/horder/78910';
     return (
-      <div className="Home">
+      <div className="Home col-10 offset-1">
         <h1>Home</h1>
-        <button className="btn btn-success"onClick={this.editEvent}>Clean Up</button>
-        <Link to={singleLink}>View Single</Link>
       </div>
     );
   }

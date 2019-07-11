@@ -14,6 +14,10 @@ import 'firebase/auth';
 import MyNavbar from '../Components/MyNavbar/MyNavbar';
 import Auth from '../Components/Auth/Auth';
 import Home from '../Components/Home/Home';
+import NewPage from '../Components/New Page/NewPage';
+import EditPage from '../Components/Edit Page/EditPage';
+import MyStuff from '../Components/MyStuff/MyStuff';
+import Single from '../Components/SinglePage/SinglePage';
 
 import connection from '../helpers/connection';
 
@@ -67,9 +71,10 @@ class App extends React.Component {
                 <Switch>
                   <PublicRoute path='/auth' component={Auth} authed={authed} />
                   <PrivateRoute path='/home' component={Home} authed={authed} />
-                  {/* <PrivateRoute path='/new' component={NewScat} authed={authed} />
-                  <PrivateRoute path='/edit/:id' component={EditScat} authed={authed} />
-                  <PrivateRoute path='/scat/:id' component={SingleScat} authed={authed} /> */}
+                  <PrivateRoute path='/new' component={NewPage} authed={authed} />
+                  <PrivateRoute path='/edit/:id' component={EditPage} authed={authed} />
+                  <PrivateRoute path='/stuff' component={MyStuff} authed={authed} />
+                  <PrivateRoute path='/stuff/:id' component={Single} authed={authed} />
                   <Redirect from="*" to="/auth" />
                 </Switch>
               </div>

@@ -11,7 +11,7 @@ class Auth extends React.Component {
 
   render() {
     return (
-      <div className="Auth">
+      <div className="Auth col-10 offset-1">
         <h1 className="loginAuth">Horder House</h1>
         <h5 className="loginAuth">"Welcome to the HorderDome, B***h!!!"</h5>
         <button className="btn btn-secondary" onClick={this.loginClickEvent}>Log In!</button>

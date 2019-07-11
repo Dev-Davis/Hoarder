@@ -45,7 +45,10 @@ render() {
             <NavLink tag={RRNavLink} to='/home' >Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={RRNavLink} to='/new'>NewScat</NavLink>
+            <NavLink tag={RRNavLink} to='/new'>New</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={RRNavLink} to='/stuff'>My Stuff</NavLink>
           </NavItem>
           <NavItem>
             <NavLink onClick={this.logMeOut}>Logout</NavLink>
@@ -58,7 +61,7 @@ render() {
   return (
     <div className="MyNavbar">
       <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/">Scat Surprise</NavbarBrand>
+          <NavbarBrand href="/">Horder Dome</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {buildNavbar()}
