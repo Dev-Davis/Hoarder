@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import stuffShapes from '../../helpers/propz/stuffShapes';
 
 class StuffCard extends React.Component {
   static propTypes = {
     stuff: stuffShapes.stuffShape,
+    deleteStuff: PropTypes.func.isRequired,
+  }
+
+  deleteMe = (e) => {
+    e.preventDefault();
+    const { stuff, deleteStuff } = this.props;
+    deleteStuff(stuff.id);
   }
 
   render() {
@@ -22,6 +29,7 @@ class StuffCard extends React.Component {
           <p className="card-title text-center">{stuff.category}</p>
           <Link className="btn btn-primary" to={singleLink}>View</Link>
           <Link className="btn btn-success" to={editLink}>Edit</Link>
+          <button className="btn btn-danger" onClick={this.deleteMe}>Delete</button>
         </div>
       </div>
     );
