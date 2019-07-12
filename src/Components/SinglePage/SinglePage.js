@@ -18,15 +18,15 @@ class SinglePage extends React.Component {
   render() {
     const { stuff } = this.state;
     return (
-      <div className="Single">
-      <h1>Single Stuff</h1>
+      <div className="Single col-10 offset-1">
+        <br></br>
         <div className="card text-center">
           <div className="card-header">
-            Item
+          <h1>{stuff.name}</h1>
           </div>
-          <div className="card-body col-10 offset-1">
-            <h5 className="card-title">{stuff.name}</h5>
-            <p className="card-text">{stuff.description}.</p>
+          <div className="card-body">
+            <h5 className="card-title">({stuff.type})</h5>
+            <h4 className="card-text">{stuff.description}.</h4>
           </div>
           <div className="card-footer text-muted">
           </div>
