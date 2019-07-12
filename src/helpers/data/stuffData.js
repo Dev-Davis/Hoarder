@@ -22,8 +22,11 @@ const postStuff = newStuff => axios.post(`${baseUrl}/stuff.json`, newStuff);
 
 const getSingleStuff = stuffId => axios.get(`${baseUrl}/stuff/${stuffId}.json`);
 
+const putStuff = (updatedStuff, stuffId) => axios.put(`${baseUrl}/stuff/${stuffId}.json`, updatedStuff);
+
 export default {
   getStuff,
   postStuff,
   getSingleStuff,
+  putStuff,
 };
