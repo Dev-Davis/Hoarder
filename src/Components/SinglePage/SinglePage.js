@@ -15,6 +15,13 @@ class SinglePage extends React.Component {
       .catch(err => console.error('can not get stuff', err));
   }
 
+  deleteStuff = () => {
+    const stuffId = this.props.match.params.id;
+    stuffData.removeStuff(stuffId)
+      .then(() => this.props.history.push('/stuff'))
+      .catch(err => console.error('unable to delete stuff', err));
+  }
+
   render() {
     const { stuff } = this.state;
     return (
@@ -27,6 +34,7 @@ class SinglePage extends React.Component {
           <div className="card-body">
             <h5 className="card-title">({stuff.type})</h5>
             <h4 className="card-text">{stuff.description}.</h4>
+            <button className="btn btn-danger" onClick={this.deleteStuff}>Delete</button>
           </div>
           <div className="card-footer text-muted">
           </div>

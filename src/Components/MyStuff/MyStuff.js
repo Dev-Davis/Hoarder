@@ -20,11 +20,18 @@ class MyStuff extends React.Component {
     this.getStuff();
   }
 
+  deleteStuff = (stuffId) => {
+    stuffData.removeStuff(stuffId)
+      .then(() => this.getStuff())
+      .catch(err => console.error('unable to delete my stuff', err));
+  }
+
   render() {
     const makeCards = this.state.stuffs.map(stuff => (
       <StuffCard
         key={stuff.id}
         stuff={stuff}
+        deleteStuff={this.deleteStuff}
         />
     ));
 
