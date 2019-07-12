@@ -10,7 +10,7 @@ const defaultStuff = {
   category: '',
 };
 
-class New extends React.Component {
+class EditPage extends React.Component {
   state = {
     newStuff: defaultStuff,
   }
@@ -111,4 +111,5 @@ class New extends React.Component {
   }
 }
 
-export default New;
+export default EditPage;
+
