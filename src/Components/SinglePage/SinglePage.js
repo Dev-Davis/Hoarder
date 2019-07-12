@@ -13,3 +13,8 @@ class SinglePage extends React.Component {
 }
 
 export default SinglePage;
+
+
+// {stuff.category}
+// {stuff.condition}
+// {stuff.type}

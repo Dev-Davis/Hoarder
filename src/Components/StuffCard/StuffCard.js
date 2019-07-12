@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 
 import stuffShapes from '../../helpers/propz/stuffShapes';
@@ -7,22 +7,21 @@ import stuffShapes from '../../helpers/propz/stuffShapes';
 class StuffCard extends React.Component {
   static propTypes = {
     stuff: stuffShapes.stuffShape,
+  }
 
-    render() {
-      const { stuff } = this.props;
-      return (
-        <div class="card col-10 offset-1">
-          <div class="card-header">
-            {stuff.name}
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
+  render() {
+    const { stuff } = this.props;
+    // const editLink = `edit/${stuff.id}`;
+    const singleLink = `stuff/${stuff.id}`;
+    return (
+      <div className="card">
+        <img src="..." className="card-img-top" alt="..." />
+        <div className="card-body">
+          <h3 className="card-title">{stuff.name}</h3>
+          <Link className="btn btn-success" to={singleLink}>View</Link>
         </div>
-      );
-    }
+      </div>
+    );
   }
 }
 

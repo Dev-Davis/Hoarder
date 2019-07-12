@@ -6,13 +6,13 @@ import StuffCard from '../StuffCard/StuffCard';
 
 class MyStuff extends React.Component {
   state = {
-    stuff: [],
+    stuffs: [],
   }
 
   getStuff = () => {
     const { uid } = firebase.auth().currentUser;
     stuffData.getStuff(uid)
-      .then(stuff => this.setState({ stuff }))
+      .then(stuffs => this.setState({ stuffs }))
       .catch(err => console.error('could not get stuff', err));
   }
 
@@ -21,17 +21,19 @@ class MyStuff extends React.Component {
   }
 
   render() {
-    const makeCards = this.state.stuff.map(stuff => (
+    const makeCards = this.state.stuffs.map(stuff => (
       <StuffCard
         key={stuff.id}
         stuff={stuff}
-      />
+        />
     ));
 
     return (
-      <div className="Stuff col-10 offset-1">
+      <div className="Stuff col">
         <h1>My Stuff</h1>
-        {makeCards}
+        <div className="d-flex">
+          {makeCards}
+        </div>
       </div>
     );
   }
