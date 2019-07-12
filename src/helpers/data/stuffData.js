@@ -4,7 +4,7 @@ import apiKeys from '../apiKeys';
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const getStuff = uid => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/stuffs.json?orderBy="uid"&equalTo="${uid}"`)
+  axios.get(`${baseUrl}/stuff.json?orderBy="uid"&equalTo="${uid}"`)
     .then((res) => {
       const stuffs = [];
       if (res.data !== null) {
@@ -20,7 +20,10 @@ const getStuff = uid => new Promise((resolve, reject) => {
 
 const postStuff = newStuff => axios.post(`${baseUrl}/stuff.json`, newStuff);
 
+const getSingleStuff = stuffId => axios.get(`${baseUrl}/stuff/${stuffId}.json`);
+
 export default {
   getStuff,
   postStuff,
+  getSingleStuff,
 };
