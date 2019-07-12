@@ -17,7 +17,7 @@ import Home from '../Components/Home/Home';
 import NewPage from '../Components/New Page/NewPage';
 import EditPage from '../Components/Edit Page/EditPage';
 import MyStuff from '../Components/MyStuff/MyStuff';
-import Single from '../Components/SinglePage/SinglePage';
+import SinglePage from '../Components/SinglePage/SinglePage';
 
 import connection from '../helpers/connection';
 
@@ -74,7 +74,7 @@ class App extends React.Component {
                   <PrivateRoute path='/new' component={NewPage} authed={authed} />
                   <PrivateRoute path='/edit/:id' component={EditPage} authed={authed} />
                   <PrivateRoute path='/stuff' component={MyStuff} authed={authed} />
-                  <PrivateRoute path='/stuff/:id' component={Single} authed={authed} />
+                  <PrivateRoute path='/item/:id' component={SinglePage} authed={authed} />
                   <Redirect from="*" to="/auth" />
                 </Switch>
               </div>

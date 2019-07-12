@@ -5,6 +5,7 @@ const stuffShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   condition: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
 });
 

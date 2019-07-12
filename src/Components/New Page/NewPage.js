@@ -8,6 +8,7 @@ const defaultStuff = {
   name: '',
   type: '',
   condition: '',
+  description: '',
   category: '',
 };
 
@@ -27,6 +28,8 @@ class New extends React.Component {
   typeChange = e => this.forFieldStringState('type', e);
 
   conditionChange = e => this.forFieldStringState('condition', e);
+
+  descriptionChange = e => this.forFieldStringState('description', e);
 
   categoryChange = e => this.forFieldStringState('category', e);
 
@@ -74,6 +77,16 @@ class New extends React.Component {
             placeholder="Good"
             value={newStuff.condition}
             onChange={this.conditionChange}/>
+          </div>
+          <div className="form-group">
+            <label htmlFor="stuffDescription">Description of Stuff</label>
+            <input
+            type="text"
+            className="form-control"
+            id="stuffDescription"
+            placeholder="A pre-amp that gives you great sound for mics and instruments"
+            value={newStuff.description}
+            onChange={this.descriptionChange}/>
           </div>
           <div className="form-group">
             <label htmlFor="stuffCategory">Category of Stuff</label>

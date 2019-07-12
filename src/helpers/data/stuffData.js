@@ -20,7 +20,10 @@ const getStuff = uid => new Promise((resolve, reject) => {
 
 const postStuff = newStuff => axios.post(`${baseUrl}/stuff.json`, newStuff);
 
+const getSingleStuff = stuffId => axios.get(`${baseUrl}/stuff/${stuffId}.json`);
+
 export default {
   getStuff,
   postStuff,
+  getSingleStuff,
 };

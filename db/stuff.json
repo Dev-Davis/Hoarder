@@ -5,6 +5,7 @@
       "type": "Headphones",
       "condition": "Good",
       "category": "Electronics",
+      "description": "Headphones with massive sound",
       "uid": "PQ2YsH3hXGgFwdMMUSSRHN69AUv1"
     },
     "stuff2": {
@@ -12,6 +13,7 @@
       "type": "Laptop",
       "condition": "Great",
       "category": "Electronics",
+      "description": "Dependable and final simple upgradable MacBook",
       "uid": "PQ2YsH3hXGgFwdMMUSSRHN69AUv1"
     },
     "stuff3": {
@@ -19,6 +21,7 @@
       "type": "DVD",
       "condition": "Great",
       "category": "Entertainment",
+      "description": "A TV show to bring back memories from Nickelodeon",
       "uid": "67890"
     },
     "stuff4": {
@@ -26,6 +29,7 @@
       "type": "Beat Machine",
       "condition": "Good",
       "category": "Music Production",
+      "description": "A beat machine that works with software to make great tunes",
       "uid": "12345"
     },
     "stuff5": {
@@ -33,6 +37,7 @@
       "type": "Handheld Gaming System",
       "condition": "Good",
       "category": "Video Games",
+      "description": "A handheld PlayStation system for the masses",
       "uid": "PQ2YsH3hXGgFwdMMUSSRHN69AUv1"
     }
   }
