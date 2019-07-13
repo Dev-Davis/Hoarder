@@ -2,6 +2,8 @@ import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import './NewPage.scss';
+
 import stuffData from '../../helpers/data/stuffData';
 
 const defaultStuff = {
@@ -49,7 +51,7 @@ class New extends React.Component {
         <h1>New Stuff</h1>
         <form onSubmit={this.submitForm}>
           <div className="form-group">
-            <label htmlFor="stuffName">Name of Stuff</label>
+            <label htmlFor="stuffName">Name</label>
             <input
             type="text"
             className="form-control"
@@ -59,7 +61,7 @@ class New extends React.Component {
             onChange={this.nameChange}/>
           </div>
           <div className="form-group">
-            <label htmlFor="stuffType">Type of Stuff</label>
+            <label htmlFor="stuffType">Type</label>
             <input
             type="text"
             className="form-control"
@@ -69,7 +71,7 @@ class New extends React.Component {
             onChange={this.typeChange}/>
           </div>
           <div className="form-group">
-            <label htmlFor="stuffCondition">Condition of Stuff</label>
+            <label htmlFor="stuffCondition">Condition</label>
             <input
             type="text"
             className="form-control"
@@ -79,7 +81,7 @@ class New extends React.Component {
             onChange={this.conditionChange}/>
           </div>
           <div className="form-group">
-            <label htmlFor="stuffDescription">Description of Stuff</label>
+            <label htmlFor="stuffDescription">Description</label>
             <input
             type="text"
             className="form-control"
@@ -89,7 +91,7 @@ class New extends React.Component {
             onChange={this.descriptionChange}/>
           </div>
           <div className="form-group">
-            <label htmlFor="stuffCategory">Category of Stuff</label>
+            <label htmlFor="stuffCategory">Category</label>
             <input
             type="text"
             className="form-control"
@@ -97,7 +99,7 @@ class New extends React.Component {
             placeholder="Electronics"
             value={newStuff.category}
             onChange={this.categoryChange}/>
-            <small id="stuffCategory" className="form-text text-muted">Make sure everything is correct before submitting.</small>
+            <small id="stuffCategory" className="form-text text-muted subs">Make sure everything is correct before submitting.</small>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>

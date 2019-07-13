@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 
 import stuffShapes from '../../helpers/propz/stuffShapes';
 
+import './StuffCard.scss';
+
 class StuffCard extends React.Component {
   static propTypes = {
     stuff: stuffShapes.stuffShape,
@@ -21,12 +23,14 @@ class StuffCard extends React.Component {
     const editLink = `edit/${stuff.id}`;
     const singleLink = `stuff/${stuff.id}`;
     return (
-      <div className="card">
-        <img src="..." className="card-img-top" alt="..." />
+      <div className="StuffCard col-4">
         <div className="card-body">
+          <p className="card-title text-center">Name</p>
           <h3 className="card-title text-center">{stuff.name}</h3>
-          <p className="card-title text-center">{stuff.condition}</p>
-          <p className="card-title text-center">{stuff.category}</p>
+          <p className="card-title text-center">Condition</p>
+          <h3 className="card-title text-center">{stuff.condition}</h3>
+          <p className="card-title text-center">Category</p>
+          <h3 className="card-title text-center">{stuff.category}</h3>
           <Link className="btn btn-primary" to={singleLink}>View</Link>
           <Link className="btn btn-success" to={editLink}>Edit</Link>
           <button className="btn btn-danger" onClick={this.deleteMe}>Delete</button>

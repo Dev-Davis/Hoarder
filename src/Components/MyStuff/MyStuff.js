@@ -36,12 +36,14 @@ class MyStuff extends React.Component {
     ));
 
     return (
-      <div className="Stuff col">
-        <h1>My Stuff</h1>
+      // <div className="row">
+      <div className="Stuff col-8 offset-2">
+        <h1 className="MyStuff">My Stuff</h1>
         <div className="d-flex">
           {makeCards}
         </div>
       </div>
+      // </div>
     );
   }
 }
