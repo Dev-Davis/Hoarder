@@ -1,6 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import './MyNavbar.scss';
+
 import React from 'react';
 import { NavLink as RRNavLink } from 'react-router-dom';
 import {

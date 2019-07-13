@@ -25,7 +25,7 @@ class SinglePage extends React.Component {
   render() {
     const { stuff } = this.state;
     return (
-      <div className="Single col-10 offset-1">
+      <div className="Single col-4 offset-4">
         <br></br>
         <div className="card text-center">
           <div className="card-header">
@@ -35,8 +35,6 @@ class SinglePage extends React.Component {
             <h5 className="card-title">({stuff.type})</h5>
             <h4 className="card-text">{stuff.description}.</h4>
             <button className="btn btn-danger" onClick={this.deleteStuff}>Delete</button>
-          </div>
-          <div className="card-footer text-muted">
           </div>
         </div>
       </div>
